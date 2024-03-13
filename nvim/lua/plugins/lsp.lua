@@ -11,6 +11,7 @@ return {
         "typescript-language-server",
         "css-lsp",
         "biome",
+        "ruff-lsp",
       })
     end,
   },
@@ -22,6 +23,7 @@ return {
       inlay_hints = { enabled = true },
       ---@type lspconfig.options
       servers = {
+        ruff_lsp = {},
         biome = {},
         cssls = {},
         tailwindcss = {
@@ -35,7 +37,7 @@ return {
           end,
           single_file_support = false,
           settings = {
-            typescript = {
+            typEscript = {
               inlayHints = {
                 includeInlayParameterNameHints = "literal",
                 includeInlayParameterNameHintsWhenArgumentMatchesName = false,
